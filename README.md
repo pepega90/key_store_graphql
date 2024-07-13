@@ -10,7 +10,8 @@ This project is an Elixir application that functions as a key/value store with R
 - **Absinthe:** Used for GraphQL API implementation due to its robust tooling and seamless integration with Phoenix.
 
 ### Redis Integration
-- **Synchronous Operations:** `handle_call` is used for `get` and `set` operations to ensure synchronous execution and immediate feedback.
+- `handle_call` is used for `get` operations to ensure synchronous execution and immediate feedback.
+- `handle_cast` is used for `set` operations to store the value by a key asynchronous
 
 ### GraphQL API
 - **Queries and Mutations:** Basic queries and mutations are designed for setting and getting values from Redis.
