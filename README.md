@@ -1,5 +1,20 @@
 # KeyValueStore
 
+## Overview
+This project is an Elixir application that functions as a key/value store with Redis integration and a GraphQL API.
+
+## Design Decisions
+### Architectural Design
+- **GenServer:** Used for managing Redis interactions due to its simplicity and reliability.
+- **Redix:** Chosen for interacting with Redis because of its lightweight and efficient nature.
+- **Absinthe:** Used for GraphQL API implementation due to its robust tooling and seamless integration with Phoenix.
+
+### Redis Integration
+- **Synchronous Operations:** `handle_call` is used for `get` and `set` operations to ensure synchronous execution and immediate feedback.
+
+### GraphQL API
+- **Queries and Mutations:** Basic queries and mutations are designed for setting and getting values from Redis.
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
